@@ -10,20 +10,6 @@ import streamlit as st
 # import pyldavis
 from streamlit import components
 
-# # print(bertopic.__version__)
-# # load the bertopic model
-# path = "/Users/shraddha/Desktop/projects/nlp/tm_deploy/final/bertopic_model.pkl"
-# # model = pickle.load(open(path, "rb"))
-
-# # model = pickle.dumps(path)
-# model = BERTopic.load(path)
-
-# print(type(model))
-
-# TO DO:
-# 1) Load the NMF model, the vectorizer, the dtm of the trained model
-# 2) Use pyLDAvis to visualize the NMF model's topics.
-
 # Loading the NMF model & TF-IDF vectorizer
 nmf_path = "/Users/shraddha/Desktop/projects/nlp/tm_deploy/final/gensim_models/sk_nmf_model.pkl"
 sk_nmf = pickle.load(open(nmf_path, "rb"))
