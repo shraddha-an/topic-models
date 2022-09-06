@@ -3,4 +3,5 @@ numpy
 pandas
 pyldavis
 gensim
+bertopic
 
