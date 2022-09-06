@@ -1,24 +1,21 @@
-# Deploying the Sklearn NMF model using Streamlit
+# Deploying the Sklearn NMF model & Gensim LDA model using Streamlit
 # Importing libraries
-import imp
 import sklearn
-import bertopic
+
 import pickle
-import bertopic
-# from bertopic import BERTopic
+
 import streamlit as st
-# import pyldavis
 from streamlit import components
 
 # Loading the NMF model & TF-IDF vectorizer
-nmf_path = "/Users/shraddha/Desktop/projects/nlp/tm_deploy/final/gensim_models/sk_nmf_model.pkl"
+nmf_path = "nmf/sk_nmf_model.pkl"
 sk_nmf = pickle.load(open(nmf_path, "rb"))
 
-tf_path = "/Users/shraddha/Desktop/projects/nlp/tm_deploy/final/gensim_models/tfidf_vectorizer.pkl"
+tf_path = "nmf/tfidf_vectorizer.pkl"
 tfidf_vectorizer = pickle.load(open(tf_path, "rb"))
 
 # ANd the document-term matrix
-dtm_path = "/Users/shraddha/Desktop/projects/nlp/tm_deploy/final/gensim_models/dtm.pkl"
+dtm_path = "nmf/dtm.pkl"
 dtm_tfidf = pickle.load(open(dtm_path, "rb"))
 
 # Display each model's visualizations.
@@ -44,7 +41,7 @@ components.v1.html(html_string, width = 1300, height = 1000, scrolling = True)
 # LDA Model
 from gensim.models import LdaMulticore
 
-path = "/Users/shraddha/Desktop/projects/nlp/tm_deploy/final/gensim_models/lda_model_fl"
+path = "lda/"
 lda_model = LdaMulticore.load(path + "/lda_model")
 
 # LDA's tf-idf corpus & dictionary
@@ -52,7 +49,7 @@ from gensim.corpora.dictionary import Dictionary
 
 id2word = Dictionary.load(path + "/lda_model.id2word")
 
-p = "/Users/shraddha/Desktop/projects/nlp/tm_deploy/final/gensim_models/tfidf_corpus_gn.pkl"
+p = "lda/tfidf_corpus_gn.pkl"
 
 tfidf_corpus = pickle.load(open(p, "rb"))
 
