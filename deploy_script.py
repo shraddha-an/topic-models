@@ -5,7 +5,7 @@ import sklearn
 import bertopic
 import pickle
 import bertopic
-from bertopic import BERTopic
+# from bertopic import BERTopic
 import streamlit as st
 # import pyldavis
 from streamlit import components
