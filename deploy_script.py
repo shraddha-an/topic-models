@@ -25,6 +25,8 @@ st.markdown("I trained 3 Topic Modelling algorithms; LDA, NMF and BERTopic, to d
     business and entertainment. Below, we see how each model has differentiated the topics and distributed the \
     keywords within them.")
 
+st.text("P.S. Choose the Light Theme in Settings to view the Topic-Word Distributions more clearly.")
+
 st.subheader("Non-Negative Matrix Factorization Model (Sklearn)")
 
 # NMF model
