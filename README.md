@@ -3,4 +3,6 @@ I explore statistical and neural-based Topic Modelling methods with LDA, NMF and
 
 Dataset used: https://www.kaggle.com/datasets/hgultekin/bbcnewsarchive
 
+<!---
 Topic Distributions (deployed app): https://bit.ly/3Bhq4Q5
+-->
